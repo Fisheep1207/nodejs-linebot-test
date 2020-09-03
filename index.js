@@ -8,10 +8,12 @@ let bot = linebot({
 });
 
 let members = {}
+let arr = []
 
 // 當有人傳送訊息給 Bot 時
 bot.on('message', function (event) {
   // 回覆訊息給使用者 (一問一答所以是回覆不是推送)
+  console.log(arr)
   let mes = event.message.text;
   if (mes == undefined){
     event.reply("我看不懂 :(((( ");
@@ -20,22 +22,24 @@ bot.on('message', function (event) {
     let id = event.source.userId;
     if (mes == "ghost"){
       console.log("pls tell me why", mes);
-      event.reply(members[id]);
+      event.reply("hi");
     }
     else{
-      if(id in members){
-        if(members[id].length <= 5){
-          console.log(`${members[id]}`);
-          members[id].push();
-        }
-        else{
-          members[id].shift();
-          members[id].push();
-        }
-      }
-      else{
-        members[id] = [mes]
-      }
+      arr.push(mes);
+      event.reply("WTF");
+      // if(id in members){
+      //   if(members[id].length <= 5){
+      //     console.log(`${members[id]}`);
+      //     members[id].push();
+      //   }
+      //   else{
+      //     members[id].shift();
+      //     members[id].push();
+      //   }
+      // }
+      // else{
+      //   members[id] = [mes]
+      // }
     }
   }
 });
