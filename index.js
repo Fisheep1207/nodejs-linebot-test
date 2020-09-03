@@ -21,9 +21,10 @@ bot.on('message', function (event) {
     console.log("pls: ", mes == "say");
     if (mes == "say"){
       console.log(`members = ${members}`)
-      for(let i = 1 ; i < members[id].length; i ++){
-        event.reply(`${members[id][i]}`);
-      }
+      event.reply("進來了！")
+      // for(let i = 1 ; i < members[id].length; i ++){
+      //   event.reply(`${members[id][i]}`);
+      // }
     }
     else{
       console.log("here1");
