@@ -1,3 +1,7 @@
-let s = 20;
-
-console.log(typeof(String(s)))
+let mes = "hello";
+if (mes == "hello"){
+    console.log("lsdkjf")
+}
+else{
+    console.log("dslkfj")
+}
