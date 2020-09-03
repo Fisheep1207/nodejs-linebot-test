@@ -18,7 +18,8 @@ bot.on('message', function (event) {
   }
   else{
     let id = event.source.userId;
-    if (mes == "say!"){
+    if (mes == "say"){
+      console.log(`members = ${members}`)
       for(let i = 1 ; i < members[id].length; i ++){
         event.reply(`${members[id][i]}`);
       }
@@ -29,7 +30,7 @@ bot.on('message', function (event) {
           members[id].push(mes)
         }
         else{
-          members[id][members.length % 5] = mes
+          members[id][members[id][0] % 5] = mes
           members[id][0]++;
         }
       }
