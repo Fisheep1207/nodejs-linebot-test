@@ -26,15 +26,17 @@ bot.on('message', function (event) {
     else{
       if(id in members){
         if(members[id].length <= 5){
-          console.log(`${members[id]}`);
+          console.log(`here: ${members[id]}`);
           members[id].push();
         }
         else{
+          console.log("here1")
           members[id].shift();
           members[id].push();
         }
       }
       else{
+        console.log("here2")
         members[id] = [mes]
       }
     }
