@@ -20,7 +20,7 @@ bot.on('message', function (event) {
   }
   else{
     let id = event.source.userId;
-    if (mes == "ghost"){
+    if (true){
       console.log("pls tell me why", mes);
       event.reply("hi");
     }
