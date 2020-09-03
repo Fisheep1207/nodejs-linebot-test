@@ -19,11 +19,13 @@ bot.on('message', function (event) {
   else{
     let id = event.source.userId;
     if (mes == "ghost"){
+      console.log("pls tell me why", mes);
       event.reply(members[id]);
     }
     else{
       if(id in members){
         if(members[id].length <= 5){
+          console.log(`${members[id]}`);
           members[id].push();
         }
         else{
