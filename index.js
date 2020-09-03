@@ -7,10 +7,37 @@ let bot = linebot({
   channelAccessToken: process.env.LINE_CHANNEL_ACCESS_TOKEN
 });
 
+let members = {}
+
 // 當有人傳送訊息給 Bot 時
 bot.on('message', function (event) {
   // 回覆訊息給使用者 (一問一答所以是回覆不是推送)
-  event.reply(`你說了 ${event.message.text}, userid = ${event.source.userId}`);
+  let mes = event.message.text;
+  if (mes == undefined){
+    event.reply("我看不懂 :(((( ");
+  }
+  else{
+    let id = event.source.userId;
+    if (mes == "say!"){
+      for(let i = 1 ; i < members[id].length; i ++){
+        event.reply(`${members[id][i]}`);
+      }
+    }
+    else{
+      if(id in members){
+        if (members[id].length <= 6){
+          members[id].push(mes)
+        }
+        else{
+          members[id][members.length % 5] = mes
+          members[id][0]++;
+        }
+      }
+      else{
+        members[id] = [1, mes]
+      }
+    }
+  }
 });
 
 // Bot 所監聽的 webhook 路徑與 port，heroku 會動態存取 port 所以不能用固定的 port，沒有的話用預設的 port 5000
