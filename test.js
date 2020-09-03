@@ -1,7 +1,4 @@
-let mes = "hello";
-if (mes == "hello"){
-    console.log("lsdkjf")
-}
-else{
-    console.log("dslkfj")
-}
+let mes = {}
+mes["bob"] = ["hello"]
+mes["bob"].push("123")
+console.log(mes)

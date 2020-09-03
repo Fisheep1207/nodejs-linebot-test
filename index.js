@@ -7,38 +7,31 @@ let bot = linebot({
   channelAccessToken: process.env.LINE_CHANNEL_ACCESS_TOKEN
 });
 
-let members = {}
+var members = {}
 
 // 當有人傳送訊息給 Bot 時
 bot.on('message', function (event) {
   // 回覆訊息給使用者 (一問一答所以是回覆不是推送)
   console.log(members)
   let mes = event.message.text;
-  if (mes == undefined){
-    event.reply("我看不懂 :(((( ");
+  let id = event.source.userId;
+  if (mes == "ghost"){
+    console.log("pls tell me why", mes);
+    console.log(`members = ${members}`)
+    event.reply(members[id]);
   }
   else{
-    let id = event.source.userId;
-    if (mes === "ghost"){
-      console.log("pls tell me why", mes);
-      event.reply(members[id]);
-    }
-    else{
-      if(id in members){
-        if(members[id].length <= 5){
-          console.log(`here: ${members[id]}`);
-          members[id].push();
-        }
-        else{
-          console.log("here1")
-          members[id].shift();
-          members[id].push();
-        }
+    if(id in members){
+      if(members[id].length <= 5){
+        members[id].push();
       }
       else{
-        console.log("here2")
-        members[id] = [mes]
+        members[id].shift();
+        members[id].push();
       }
+    }
+    else{
+      members[id] = [mes];
     }
   }
 });
