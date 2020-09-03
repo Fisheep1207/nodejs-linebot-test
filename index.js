@@ -17,7 +17,6 @@ bot.on('message', function (event) {
   let id = event.source.userId;
   if(id in members){
     console.log("here");
-    event.reply(members[id]);
     if(members[id].length <= 5){
       members[id].push();
     }
@@ -25,6 +24,7 @@ bot.on('message', function (event) {
       members[id].shift();
       members[id].push();
     }
+    event.reply(members[id]);
   }
   else{
     members[id] = [mes];
