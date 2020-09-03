@@ -15,24 +15,19 @@ bot.on('message', function (event) {
   console.log(members)
   let mes = event.message.text;
   let id = event.source.userId;
-  if (mes == "ghost"){
-    console.log("pls tell me why", mes);
-    console.log(`members = ${members}`)
+  if(id in members){
+    console.log("here");
     event.reply(members[id]);
-  }
-  else{
-    if(id in members){
-      if(members[id].length <= 5){
-        members[id].push();
-      }
-      else{
-        members[id].shift();
-        members[id].push();
-      }
+    if(members[id].length <= 5){
+      members[id].push();
     }
     else{
-      members[id] = [mes];
+      members[id].shift();
+      members[id].push();
     }
+  }
+  else{
+    members[id] = [mes];
   }
 });
 
