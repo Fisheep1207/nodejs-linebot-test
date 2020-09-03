@@ -18,6 +18,7 @@ bot.on('message', function (event) {
   }
   else{
     let id = event.source.userId;
+    console.log(mes);
     if (mes == "say"){
       console.log(`members = ${members}`)
       for(let i = 1 ; i < members[id].length; i ++){
