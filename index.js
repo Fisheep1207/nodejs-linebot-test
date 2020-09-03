@@ -26,16 +26,21 @@ bot.on('message', function (event) {
       }
     }
     else{
+      console.log("here1");
       if(id in members){
+        console.log("here2");
         if (members[id].length <= 6){
+          console.log("here3");
           members[id].push(mes)
         }
         else{
-          members[id][members[id][0] % 5] = mes
+          console.log("here4");
+          members[id][members[id][0]%5 + 1] = mes
           members[id][0]++;
         }
       }
       else{
+        console.log("here5");
         members[id] = [1, mes]
       }
     }
