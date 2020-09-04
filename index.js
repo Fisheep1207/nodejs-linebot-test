@@ -16,15 +16,18 @@ bot.on('message', async function (event) {
   let mes = event.message.text;
   let id = event.source.userId;
   if (mes == "ghost"){
-    console.log("fuck??");
-    return event.reply([
-      { type: 'text', text: 'Hello, world 1' },
-      { type: 'text', text: 'Hello, world 2' }
-    ]);
+    let reply_mes = []
+    for(let i = 0 ; i < 5 ; i ++){
+      reply_mes.push({
+        type:"text",
+        text: members[id][i]
+      })
+    }
+    return event.reply(reply_mes);
   }
   else{
     if(id in members){
-      if(members[id].length <= 5){
+      if(members[id].length < 5){
         members[id].push(mes);
       }
       else{
@@ -40,5 +43,5 @@ bot.on('message', async function (event) {
 
 // Bot 所監聽的 webhook 路徑與 port，heroku 會動態存取 port 所以不能用固定的 port，沒有的話用預設的 port 5000
 bot.listen('/', process.env.PORT || 5000, function () {
-  console.log('全國首家LINE線上機器人上線啦！！');
+  console.log('bot getting start!');
 });
