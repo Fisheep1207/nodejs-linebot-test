@@ -1,4 +1,4 @@
-export default {
+exports.modules = {
     "type": "carousel",
     "contents": [
       {

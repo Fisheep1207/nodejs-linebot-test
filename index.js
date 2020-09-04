@@ -1,4 +1,4 @@
-import flex_mes from "./flex_mes.js";
+let flex_mes = require("./flex_mes.js")
 let linebot = require('linebot');
 
 // 初始化 line bot 需要的資訊，在 Heroku 上的設定的 Config Vars，可參考 Step2
