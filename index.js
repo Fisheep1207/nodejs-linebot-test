@@ -15,20 +15,30 @@ bot.on('message', async function (event) {
   console.log(members)
   let mes = event.message.text;
   let id = event.source.userId;
+  console.log(`mes = ${mes}, id = ${id}`);
   if(id in members){
-    console.log("here");
+    console.log("here1");
     if(members[id].length <= 5){
+      console.log("here2");
       members[id].push();
+      console.log("here3");
     }
     else{
+      console.log("here4");
       members[id].shift();
+      console.log("here5");
       members[id].push();
+      console.log("here6");
     }
+    console.log("here7");
     await event.reply(members[id]);
+    console.log("here8");
   }
   else{
     console.log("Nononononon");
     members[id] = [mes];
+    console.log("here end");
+    return;
   }
 });
 
