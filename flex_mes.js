@@ -17,7 +17,30 @@ exports.vid = {
     "originalContentUrl": "https://example.com/original.m4a",
     "duration": 60000
 }
-exports.fuck = 
+exports.fuck1 = 
+    {
+        "type": "flex",
+        "altText": "This is a Flex Message",
+        "contents": {
+          "type": "bubble",
+          "body": {
+            "type": "box",
+            "layout": "horizontal",
+            "contents": [
+              {
+                "type": "text",
+                "text": "Hello,"
+              },
+              {
+                "type": "text",
+                "text": "World!"
+              }
+            ]
+          }
+        }
+      }
+
+exports.fuck2 = 
     {
         "type": "template",
         "altText": "this is a image carousel template",

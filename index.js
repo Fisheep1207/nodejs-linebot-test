@@ -34,6 +34,12 @@ bot.on('message', async function (event) {
   else if (mes == "video"){
     await event.reply(flex_mes.vid);
   }
+  else if (mes == "fuck1"){
+    await event.reply(flex_mes.fuck1);
+  }
+  else if (mes == "fuck2"){
+    await event.reply(flex_mes.fuck2);
+  }
   else{
     if(id in members){
       if(members[id].length < 5){
