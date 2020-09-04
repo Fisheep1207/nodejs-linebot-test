@@ -16,7 +16,12 @@ bot.on('message', async function (event) {
   let mes = event.message.text;
   let id = event.source.userId;
   if (mes == "ghost"){
-    await event.reply(members[id]);
+    console.log("fuck??");
+    event.reply(members[id]).then(function (data) {
+      console.log("success");
+    }).catch(function (error) {
+      console.log("failed");
+    })
     return;
   }
   else{
