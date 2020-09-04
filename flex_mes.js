@@ -1,4 +1,4 @@
-exports.mes = {
+exports.mes = JSON.stringify({
     "type": "carousel",
     "contents": [
       {
@@ -262,4 +262,4 @@ exports.mes = {
         }
       }
     ]
-  }
+  })
