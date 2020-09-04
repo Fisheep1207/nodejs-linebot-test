@@ -10,7 +10,7 @@ let bot = linebot({
 var members = {}
 
 // 當有人傳送訊息給 Bot 時
-bot.on('message', function (event) {
+bot.on('message', async function (event) {
   // 回覆訊息給使用者 (一問一答所以是回覆不是推送)
   console.log(members)
   let mes = event.message.text;
@@ -24,7 +24,7 @@ bot.on('message', function (event) {
       members[id].shift();
       members[id].push();
     }
-    event.reply(members[id]);
+    await event.reply(members[id]);
   }
   else{
     members[id] = [mes];
