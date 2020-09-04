@@ -10,13 +10,14 @@ let bot = linebot({
 let members = {}
 
 // 當有人傳送訊息給 Bot 時
-bot.on('message', function (event) {
+bot.on('message', async function (event) {
   // 回覆訊息給使用者 (一問一答所以是回覆不是推送)
   console.log(members)
   let mes = event.message.text;
   let id = event.source.userId;
   if (mes == "ghost"){
-    event.reply(members[id]);
+    await event.reply(members[id]);
+    return;
   }
   else{
     if(id in members){
