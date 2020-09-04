@@ -148,6 +148,11 @@ exports.mes = {
       "flex": 0
     }
   }
+exports.vid = {
+    "type": "audio",
+    "originalContentUrl": "https://example.com/original.m4a",
+    "duration": 60000
+}
 // exports.mes = {
 //     "type": "carousel",
 //     "contents": [

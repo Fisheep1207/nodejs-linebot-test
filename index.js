@@ -25,7 +25,7 @@ bot.on('message', async function (event) {
     }
     return event.reply(reply_mes);
   }
-  else if (mes == "patrick"){
+  else if (mes == "flex"){
     console.log(flex_mes.mes)
     console.log(typeof(flex_mes.mes))
     try{
@@ -35,6 +35,14 @@ bot.on('message', async function (event) {
       console.log("failed");
     }
     return;
+  }
+  else if (mes == "video"){
+    try{
+      event.reply(flex_mes.vid);
+    }
+    catch{
+      console.log("failed");
+    }
   }
   else{
     if(id in members){
