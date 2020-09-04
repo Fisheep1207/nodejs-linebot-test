@@ -1,15 +1,41 @@
 exports.mes = {
     "type": "bubble",
+    "header": {
+      "type": "box",
+      "layout": "vertical",
+      "contents": [
+        {
+          "type": "text",
+          "text": "Header text"
+        }
+      ]
+    },
     "hero": {
       "type": "image",
-      "size": "full",
-      "aspectRatio": "20:13",
-      "aspectMode": "cover",
-      "action": {
-        "type": "uri",
-        "uri": "http://linecorp.com/"
-      },
-      "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/01_1_cafe.png"
+      "url": "https://vignette.wikia.nocookie.net/worldpedias/images/0/0f/Patrick_Star.PNG/revision/latest/scale-to-width-down/340?cb=20140620143247&path-prefix=zh"
+    },
+    "body": {
+      "type": "box",
+      "layout": "vertical",
+      "contents": [
+        {
+          "type": "text",
+          "text": "Body text"
+        }
+      ]
+    },
+    "footer": {
+      "type": "box",
+      "layout": "vertical",
+      "contents": [
+        {
+          "type": "text",
+          "text": "Footer text"
+        }
+      ]
+    },
+    "styles": {
+      "comment": "See the example of a bubble style object"
     }
   }
 exports.vid = {
