@@ -1,4 +1,4 @@
-exports.modules = {
+exports.mes = {
     "type": "carousel",
     "contents": [
       {

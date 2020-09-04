@@ -28,7 +28,7 @@ bot.on('message', async function (event) {
   else if (mes == "patrick"){
     console.log(flex_mes)
     try{
-      await event.reply(flex_mes);
+      await event.reply(flex_mes.mes);
     }
     catch{
       console.log("failed");
