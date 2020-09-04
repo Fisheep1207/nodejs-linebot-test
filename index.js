@@ -28,21 +28,11 @@ bot.on('message', async function (event) {
   else if (mes == "flex"){
     console.log(flex_mes.mes)
     console.log(typeof(flex_mes.mes))
-    try{
-      return event.reply(flex_mes.mes);
-    }
-    catch{
-      console.log("failed");
-    }
+    await event.reply(flex_mes.mes);
     return;
   }
   else if (mes == "video"){
-    try{
-      event.reply(flex_mes.vid);
-    }
-    catch{
-      console.log("failed");
-    }
+    await event.reply(flex_mes.vid);
   }
   else{
     if(id in members){
