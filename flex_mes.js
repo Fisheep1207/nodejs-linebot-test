@@ -153,6 +153,41 @@ exports.vid = {
     "originalContentUrl": "https://example.com/original.m4a",
     "duration": 60000
 }
+exports.fuck = 
+    {
+        "type": "template",
+        "altText": "this is a image carousel template",
+        "template": {
+            "type": "image_carousel",
+            "columns": [
+                {
+                  "imageUrl": "https://vignette.wikia.nocookie.net/worldpedias/images/0/0f/Patrick_Star.PNG/revision/latest/scale-to-width-down/340?cb=20140620143247&path-prefix=zh",
+                  "action": {
+                    "type": "postback",
+                    "label": "Buy",
+                    "data": "action=buy&itemid=111"
+                  }
+                },
+                {
+                  "imageUrl": "https://vignette.wikia.nocookie.net/worldpedias/images/0/0f/Patrick_Star.PNG/revision/latest/scale-to-width-down/340?cb=20140620143247&path-prefix=zh",
+                  "action": {
+                    "type": "message",
+                    "label": "Yes",
+                    "text": "yes"
+                  }
+                },
+                {
+                  "imageUrl": "https://vignette.wikia.nocookie.net/worldpedias/images/0/0f/Patrick_Star.PNG/revision/latest/scale-to-width-down/340?cb=20140620143247&path-prefix=zh",
+                  "action": {
+                    "type": "uri",
+                    "label": "View detail",
+                    "uri": "https://vignette.wikia.nocookie.net/worldpedias/images/0/0f/Patrick_Star.PNG/revision/latest/scale-to-width-down/340?cb=20140620143247&path-prefix=zh"
+                  }
+                }
+            ]
+        }
+      }
+
 // exports.mes = {
 //     "type": "carousel",
 //     "contents": [
