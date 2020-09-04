@@ -27,6 +27,7 @@ bot.on('message', async function (event) {
     await event.reply(members[id]);
   }
   else{
+    console.log("Nononononon");
     members[id] = [mes];
   }
 });
