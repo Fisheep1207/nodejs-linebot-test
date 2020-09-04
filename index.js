@@ -31,6 +31,7 @@ bot.on('message', async function (event) {
       console.log("here6");
     }
     console.log("here7");
+    console.log(members);
     await event.reply(members[id]);
     console.log("here8");
   }
