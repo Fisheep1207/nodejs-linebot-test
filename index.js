@@ -17,7 +17,7 @@ bot.on('message', async function (event) {
   let id = event.source.userId;
   if (mes == "ghost"){
     console.log("fuck??");
-    return event.reply([0, 1, 2, 3, 4]);
+    return event.reply("FUCK boy???");
   }
   else{
     if(id in members){
